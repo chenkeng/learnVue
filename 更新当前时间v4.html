@@ -12,6 +12,10 @@
         <div>{{date | formatDate}}</div>
     </div>
     <script type="text/javascript">
+    // 定义preDate函数用来补位  01月，02 分之类的
+    function preDate(value){
+        return value<10?"0"+value:value;
+    }
         let vm=new Vue({
             el:"#app",
             data:{
@@ -37,11 +41,11 @@
                 formatDate:function(value){
                     var date=new Date(value);
                     var year=date.getFullYear();
-                    var month=date.getMonth()+1;
-                    var day=date.getDate();
-                    var hours=date.getHours();
-                    var minutes=date.getMinutes();
-                    var seconds=date.getSeconds();
+                    var month=preDate(date.getMonth()+1);
+                    var day=preDate(date.getDate());
+                    var hours=preDate(date.getHours());
+                    var minutes=preDate(date.getMinutes());
+                    var seconds=preDate(date.getSeconds());
                     return year+"-"+month+"-"+day+" "+hours+":"+minutes+":"+seconds;
                 }
             }
