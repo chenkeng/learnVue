@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="lib/vue.js" charset="utf-8"></script>
+</head>
+<body>
+    <!-- v-cloak 这个指令在网速特别慢的情况下用 -->
+    <div id="app" v-cloak>
+        {{message}}
+    </div>
+    <script type="text/javascript">
+        let vm=new Vue({
+            el:"#app",
+            data:{
+                message:"this is a pragraph"
+            }
+        })
+    </script>
+</body>
+</html>

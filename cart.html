@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="lib/vue.js" charset="utf-8"></script>
+</head>
+<body>
+    <div id="app">
+        {{prices}}
+    </div>
+
+    <script type="text/javascript">
+        var vm=new Vue({
+            el:"#app",
+            data:{
+                package1:[
+                    {
+                        name:"iphone7",
+                        price:"7199",
+                        count:2
+                    },
+                    {
+                        name:"iphoneX",
+                        price:"8399",
+                        count:10
+                    }
+                ],
+                package2:[
+                    {
+                        name:"iMac",
+                        price:"10899",
+                        count:4
+                    },
+                    {
+                        name:"iwatch",
+                        price:"11199",
+                        count:8
+                    }
+                ]
+            },
+            computed:{
+                prices:function () {
+                    var prices=0;
+                    for (var i = 0; i < this.package1.length; i++) {
+                        prices+=this.package1[i].price*this.package1[i].count;
+                    }
+                    for (var i = 0; i < this.package2.length; i++) {
+                        prices+=this.package2[i].price*this.package1[i].count;
+                    }
+                    return prices;
+                }
+            }
+        })
+    </script>
+</body>
+</html>
