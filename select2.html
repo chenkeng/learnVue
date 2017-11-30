@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="lib/vue.js" charset="utf-8"></script>
+</head>
+<body>
+    <!-- 特别注意，如果option 未设置value 的时候，
+        selected 的值为option中间的值
+        否则option的值优先为value的值 -->
+    <div id="app">
+        <select v-model="selected" multiple>
+            <option >html</option>
+            <option value="vue">vue</option>
+            <option >css</option>
+        </select>
+        <div>你选择的是：{{selected}}</div>
+    </div>
+    <script type="text/javascript">
+        let vm=new Vue({
+            el:"#app",
+            data:{
+                selected:["html",'css']
+            }
+        })
+    </script>
+</body>
+</html>

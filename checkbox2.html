@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="lib/vue.js" charset="utf-8"></script>
+</head>
+<body>
+    <div id="app">
+        <input type="checkbox" v-model="checked" value="html" id="html">
+        <label for="html">html</label>
+        <br>
+        <input type="checkbox" v-model="checked" value="vue" id="vue">
+        <label for="vue">vue</label>
+        <br>
+        <input type="checkbox" v-model="checked" value="css" id="css">
+        <label for="css">css</label>
+        <br>
+        <div>你选择的是：{{checked}}</div>
+    </div>
+    <script type="text/javascript">
+        var app=new Vue({
+            el:"#app",
+            data:{
+                checked:['html','vue']
+            }
+        })
+    </script>
+</body>
+</html>
