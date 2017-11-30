@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>我的购物车</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="../lib/vue.js" charset="utf-8"></script>
+</head>
+<body>
+    <div id="app">
+        <template id="" v-if="list.length">
+            <table>
+                <thead>
+                    <tr>
+                        <th>序号</th>
+                        <th>商品名称</th>
+                        <th>商品单价</th>
+                        <th>购买数量</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="(item,index) in list">
+                        <td>{{index+1}}</td>
+                        <td>{{item.name}}</td>
+                        <td>{{item.price}}</td>
+                        <td><button @click="handleReduce(index)"
+                            :disabled="item.count===1">-</button>
+                            {{item.count}}
+                            <button @click="handleAdd(index)">+</button>
+                        </td>
+                        <td><button @click="handleRemove(index)">移除</button></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div>总价：￥{{totalPrice}}</div>
+        </template>
+        <div v-else>购物车为空</div>
+    </div>
+</body>
+<script src="index.js" charset="utf-8"></script>
+</html>
