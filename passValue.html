@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="cdn/vue.js" charset="utf-8"></script>
+</head>
+<body>
+    <div id="app">
+      <p>{{total}}</p>
+      <button-counter @click:clickcounter="clicktotal"></button-counter>
+      <button-counter @click:clickcounter="clicktotal"></button-counter>
+    </div>
+
+    <script type="text/javascript">
+      Vue.component("button-counter",{
+        template:'<button v-on:click="clickcounter">{{counter}}</button>',
+        data:function(){
+          return {
+            counter:0
+          }
+        },
+        methods:{
+          clickcounter:function(){
+            this.counter+=1;
+            this.$emit('clickcounter');
+          }
+        }
+      })
+      new Vue({
+        el:"#app",
+        data:{
+          total:0
+        },
+        methods:{
+          clicktotal:function(){
+            this.total+=1;
+          }
+        }
+      })
+    </script>
+</body>
+</html>

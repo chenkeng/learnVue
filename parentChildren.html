@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="cdn/vue.js" charset="utf-8"></script>
+</head>
+<body>
+  <div id="app">
+    <parent-component></parent-component>
+    <parent-component2></parent-component2>
+  </div>
+
+  <script>
+      // 子组件构造器
+      var Child=Vue.extend({
+        template:"<img src='superhan.jpg' />"
+      })
+      // 父组件构造器
+      var Parent=Vue.extend({
+        template:'<div><child-component></child-component> <p>照片很模糊</p> </div>',
+        components:{
+          "child-component":Child
+        }
+      })
+      var Parent2=Vue.extend({
+        template:'<div><p>这个人很帅</p> <child-component></child-component></div>',
+        components:{
+          'child-component':Child
+        }
+      })
+      Vue.component('parent-component',Parent);
+      Vue.component('parent-component2',Parent2);
+      new Vue({
+        el:"#app"
+      })
+  </script>
+  <style>
+      img{
+        width: 200px;
+        height: 400px;
+      }
+  </style>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="cdn/vue.js" charset="utf-8"></script>
+</head>
+<body>
+    <div id="app">
+        <my-component></my-component>
+    </div>
+    <div id="app1">
+        <!-- 此处的组件不能实例化，因为不是全局组件，会报错为未命名组件 -->
+        <my-component></my-component>
+    </div>
+        <my-component></my-component>
+    <script>
+        var profile=Vue.extend({
+          template:"<h2>VUE 局部组件</h2>"
+        })
+        // 在 app中注册组件，为局部组件，不能被公用
+        var vm=new Vue({
+          el:"#app",
+          components:{
+            'my-component':profile
+          }
+        })
+        new Vue({
+            el:"#app1"
+        })
+    </script>
+</body>
+</html>

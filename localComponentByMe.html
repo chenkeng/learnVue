@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="cdn/vue.js" charset="utf-8"></script>
+</head>
+<body>
+<div id="app">
+<my-component1></my-component1>
+<my-component2></my-component2>
+</div>
+
+<script>
+// 注意此处 组件中间用冒号隔开  ：
+    var app=new Vue({
+      el:"#app",
+      components:{
+        'my-component1':{
+          template:"<h1>我是局部组件1</h1>"
+        },
+        'my-component2':{
+          template:"<h2>我是局部组件2</h2>"
+        }
+      }
+    })
+</script>
+</body>
+</html>

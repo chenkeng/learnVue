@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="cdn/vue.js" charset="utf-8"></script>
+</head>
+<body>
+    <div id="app">
+        <my-component></my-component>
+    </div>
+    <div id="app1">
+      <my-component></my-component>
+    </div>
+    <my-component></my-component>
+    <script type="text/javascript">
+    // 注册的全局组件可以在多个vue实例中公用，不能在非实例中用
+        var profile=Vue.extend({
+          template:"<h1>全剧组件</h1>"
+        })
+      var myComponent=  Vue.component("my-component",profile);
+        // 需要用到Vue.component("组件标签名称"，构造器名称)
+  //var myComponent=Vue.component("my-component");
+  console.log(myComponent)
+        var vm=new Vue({
+          el:"#app",
+        })
+        new Vue({
+          el:"#app1"
+        })
+
+
+    </script>
+</body>
+</html>

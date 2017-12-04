@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="vue.js" charset="utf-8"></script>
+</head>
+<body>
+  <div id="app">
+    <my-component>
+      <h1>内容区域</h1>
+    </my-component>
+  </div>
+  <template id="myComponent">
+    <div>
+      <p>头部区域</p>
+      <slot>如果没有奋发内容，则显示默认提示</slot>
+      <p>尾部区域</p>
+    </div>
+  </template>
+  <script type="text/javascript">
+    Vue.component("my-component",{
+      template:"#myComponent"
+    })
+    new Vue({
+      el:"#app"
+    })
+  </script>
+</body>
+</html>
