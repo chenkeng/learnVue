@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="lib/vue.js"></script>
+    <style>
+        ul{
+            list-style: none;
+        }
+        ul>li{
+            height: 30px;
+            line-height: 1;
+            cursor: pointer;
+        }
+        .active{
+            background-color: orange;
+            color:#fff;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <ul>
+            <li v-for="(college,index) in colleges" :class="index===activeCollege?'active':''">{{college}}</li>
+        </ul>
+    </div>
+    <script>
+        var vm=new Vue({
+            el:"#app",
+            data:{
+                colleges:['ios','ui','html5','javascript'],
+                activeCollege:2
+            }
+        })
+    </script>
+</body>
+</html>
+
+<!--
+
+<div v-for="(item,index) in items"></div>
+<div v-for="(val,key) in object"></div>
+<div v-for="(val,key,index) in object"></div>
+<div v-for="item in items" :key="item.id"> {{item.text}}</div>
+
+v-bind:src="imgsrc"   :src='imgsrc'
+:class="{red:isRed}"
+:class="[classA,classB]"
+:style="{fontSize:size+'px'}"
+:style="[styleObjectA,styleObjectB]"
+v-bind:"{id:someProp,'other-attr':otherProp}"
+
+语法结构：v-bind：argument="expression"
+
+
+
+
+
+-->
