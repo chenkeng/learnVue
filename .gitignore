@@ -1,5 +1,6 @@
 lib
 .git
 .idea
-idea
+.idea/
+.DS_Store
 
