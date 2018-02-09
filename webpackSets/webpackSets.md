@@ -203,3 +203,30 @@ module.exports=config;
         }
     </style>
 ```
+
+# vue-cli 的安装说明   
+
+> 全局安装 vue-cli   
+
+$ npm install --global vue-cli  
+
+> 创建一个基于 webpack 模板的新项目  
+```js
+$ vue init webpack my-project  # 初始化项目
+$ cd my-project # 切进项目文件夹
+$ npm install # 安装依赖
+$ npm run dev # 运行项目
+
+/*初始化安装框架 说明  
+$ vue init <template-name> <project-name>
+语法说明：
+参数二：project-name名字自定义本地项目名称 。
+参数一：template-name远程模板名称一共有以下几个可选模板。
+template-name官方临时提供了一下模板可以选择。                
+        A、webpack 
+        B、webpack-simple 
+        C、browserify
+        D、browserify-simple
+        E、simple 
+*/
+```
