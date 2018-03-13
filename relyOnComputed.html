@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script src="lib/vue.js"></script>
+<body>
+    <div id="app1">
+        {{text}}
+    </div>
+    <div id="app2">
+        {{reversetext}}
+    </div>
+    <script>
+        let app1=new Vue({
+            el:"#app1",
+            data:{
+                text:'123,456'
+            }
+        })
+        let app2=new Vue({
+            el:"#app2",
+            data:{
+
+            },
+            computed:{
+                reversetext:function(){
+                    return app1.text.split(",").reverse().join(",");
+                }
+            }
+        })
+    </script>
+</body>
+</html>
