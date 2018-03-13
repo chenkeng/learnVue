@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script src="lib/vue.js"></script>
+<body>
+    <div id="app">
+        <p v-if="show">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, nam.</p>
+        <button v-on:click="handleclick">显示or隐藏</button>
+        <button v-on:dblclick="handledblclick">显示or隐藏</button>
+        <button v-on:keyup="handlekeyup">显示or隐藏</button>
+        <button v-on:mousemove="handlemousemove">显示or隐藏</button>
+    </div>
+</body>
+<script>
+    let vm=new Vue({
+        el:"#app",
+        data:{
+            show:true
+        },
+        methods: {
+            handleclick:function(){
+                this.handle();
+            },
+            handledblclick:function(){
+                this.handle();
+            },
+            handlekeyup:function(){
+                this.handle();
+            },
+            handlemousemove:function(){
+                this.handle();
+            },
+            handle:function(){
+                this.show=!this.show;
+            }
+
+        }
+    })
+
+</script>
+</html>
