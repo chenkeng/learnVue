@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script src="lib/vue.js"></script>
+
+<body>
+    <div id="app">
+        <ul>
+            <li v-for="(book,index) in filterbooks">{{index}}--{{book.name}}--{{book.author}}</li>
+        </ul>
+<br>
+        <ul>
+            <li v-for="(book,index) in sortedbooks">{{index}}--{{book.name}}--{{book.author}}</li>
+        </ul>
+    </div>
+
+    <script>
+        let vm = new Vue({
+            el: "#app",
+            data: {
+                books: [{
+                    name: 'javascript',
+                    author: 'xiaoming'
+                }, {
+                    name: 'java',
+                    author: 'xiaowangcai'
+                }, {
+                    name: 'css',
+                    author: 'xiaomei'
+                }]
+            },
+            computed:{
+                filterbooks:function(){
+                    return this.books.filter(function(item){
+                        return item.name.match(/java/);
+                    })
+                },
+                sortedbooks:function(){
+                    return this.books.sort(function(a,b){
+                        return a.author.length< b.author.length;
+                    })
+                }
+            }
+        })
+
+        
+    </script>
+</body>
+
+</html>

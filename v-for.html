@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,23 +8,37 @@
     <title>Document</title>
     <script src="lib/vue.js" charset="utf-8"></script>
 </head>
+
 <body>
     <div id="app">
         <ul>
-            <li v-for="book in bookList">{{book.name}}</li>
+            <li v-for="(user,index) in userInfo">{{index}}---{{user.author}}</li>
         </ul>
+        
     </div>
-<script type="text/javascript">
-    let vm=new Vue({
-        el:"#app",
-        data:{
-            bookList:[
-                {name:"《vue 实战》"},
-                {name:"《javascript》"},
-                {name:"《精通html》"}
-            ]
-        }
-    })
-</script>
+    <script type="text/javascript">
+        let vm = new Vue({
+            el: "#app",
+            data: {
+                userInfo: [{
+                        author: 'xiaoming',
+                        age: 28,
+                        sex: 'boy'
+                    },
+                    {
+                        author: 'xiaohong',
+                        age: 20,
+                        sex: 'girl'
+                    },
+                    {
+                        author: 'xiaoyi',
+                        age: 30,
+                        sex: 'female'
+                    }
+                ]
+            }
+        })
+    </script>
 </body>
+
 </html>

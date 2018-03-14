@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script src="lib/vue.js"></script>
+
+<body>
+    <div id="app">
+        <ul>
+            <li v-for="(book,index) in books">{{index}}--{{book.bookname}}</li>
+        </ul>
+    </div>
+
+    <script>
+        let vm = new Vue({
+            el: "#app",
+            data: {
+                books: [{
+                    bookname: 'javascript',
+                    author: 'xiaoming'
+                }, {
+                    bookname: 'java',
+                    author: 'xiaowang'
+                }, {
+                    bookname: 'css',
+                    author: 'xiaomei'
+                }]
+            }
+        })
+
+        vm.books=vm.books.filter(function(item){
+            return item.bookname.match(/java/);
+        })
+
+        vm.books.splice(2,1,{
+            bookname:'javascript && nodejs',
+            author:'superhan'
+        })
+    </script>
+</body>
+
+</html>
