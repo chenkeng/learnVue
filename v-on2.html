@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script src="lib/vue.js"></script>
+<body>
+    <div id="app">
+
+        统计点击次数：{{count}}
+        <br>
+        <button v-on:click="handleclickadd()">+1</button>
+        <br>
+        <button @click="handleclickadd(10)">+10</button>
+        <br>
+    </div>
+
+    <script>
+        let vm=new Vue({
+            el:"#app",
+            data:{
+                count:0
+            },
+            methods:{
+                handleclickadd:function(count){
+                    count=count||1;
+                    this.count+=count;
+                }
+            }
+        })
+    </script>
+</body>
+</html>

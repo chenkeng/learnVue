@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script src="lib/vue.js"></script>
+<body>
+    <div id="app">
+        <a href="http://www.baidu.com" @click="handleclick('禁止打开',$event)">打开百度</a>
+    </div>
+</body>
+<script>
+
+    let vm=new Vue({
+        el:"#app",
+        methods:{
+            handleclick:function(message,event){
+                event.preventDefault();
+                window.alert(message);
+            }
+        }
+    })
+</script>
+</html>
