@@ -1,32 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
-  <script src="vue.js" charset="utf-8"></script>
+  <script src="lib/vue.js" charset="utf-8"></script>
 </head>
+
 <body>
   <div id="app">
     <my-component>
       <h1>内容区域</h1>
+      <div class="center">
+          <img class="circle" src="superhan.jpg">
+      </div>
     </my-component>
   </div>
   <template id="myComponent">
     <div>
-      <p>头部区域</p>
-      <slot>如果没有奋发内容，则显示默认提示</slot>
+      <p class="title">头部区域</p>
+      <slot>如果没有分发内容，则显示默认提示</slot>
       <p>尾部区域</p>
     </div>
   </template>
   <script type="text/javascript">
-    Vue.component("my-component",{
-      template:"#myComponent"
+    Vue.component("my-component", {
+      template: "#myComponent"
     })
     new Vue({
-      el:"#app"
+      el: "#app"
     })
   </script>
 </body>
+<style>
+  .title {
+    height: 44px;
+    background-color: darkmagenta;
+    color: white;
+    font-size: 30px;
+  }
+.center{
+  margin: 0 auto;
+  
+}
+  .circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
+</style>
+
 </html>

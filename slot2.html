@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="lib/vue.js"></script>
 </head>
+
 <body>
     <div id="app">
         <div>
@@ -13,14 +15,15 @@
                 <p>这是内容1</p>
                 <p>这是内容2</p>
             </v-one>
-
+            <hr>
             <v-two>
+                <h4>具名slot可以与单个slot共存</h4>
                 <p slot="nav">我是导航</p>
                 <p slot="main">我是内容</p>
                 <p slot="footer">我是底部</p>
             </v-two>
 
-
+            <hr>
             <v-three>
                 <template scope="props">
                     <p>{{props.text}}</p>
@@ -35,66 +38,75 @@
 
 
 
-<template id="one">
-    <div>
-        <h1>组件标题</h1>
-        <slot></slot>
-        <p>组件内容</p>
-        <p>{{one}}</p>
-    </div>
-</template>
+    <template id="one">
+        <div>
+            <h1>组件标题</h1>
+            <slot></slot>
+            <p>组件内容</p>
+            <p>{{one}}</p>
+        </div>
+    </template>
 
 
-<template id="two">
-    <div>
-        <nav>
-            <slot name="nav"></slot>
-        </nav>
-        <main>
-            <slot name="main"></slot>
-        </main>
-        <footer>
-            <slot name="footer"></slot>
-        </footer>
-    </div>
-</template>
+    <template id="two">
+        <div class="name">
+            <h3>这里是具名slot</h3>
+            <slot>可以与单个slot共存</slot>
+            <nav class="nav">
+                <slot name="nav"></slot>
+            </nav>
+            <main>
+                <slot name="main"></slot>
+            </main>
+            <footer>
+                <slot name="footer"></slot>
+            </footer>
+        </div>
+    </template>
 
-<template id="three">
-    <div>
-        <slot :text="three"></slot>
-    </div>
-</template>
+    <template id="three">
+        <div>
+            <slot :text="three"></slot>
+        </div>
+    </template>
 
 </body>
 <script>
     new Vue({
-        el:'#app',
-        components:{
-            'v-one':{
-                template:'#one',
-                data (){
+        el: '#app',
+        components: {
+            'v-one': {
+                template: '#one',
+                data() {
                     return {
-                        'one':'i am one'
+                        'one': 'i am one'
                     }
                 }
             },
-            'v-two':{
-                template:'#two',
+            'v-two': {
+                template: '#two',
                 data: function () {
                     return {
                         'two': 'i am two'
                     }
                 }
             },
-            'v-three':{
-                template:'#three',
-                data(){
+            'v-three': {
+                template: '#three',
+                data() {
                     return {
-                        'three':'i am three'
+                        'three': 'i am three'
                     }
                 }
             }
         }
     })
 </script>
+<style>
+
+    .nav{
+        background-color: darkolivegreen;
+        font-size: 30px;
+    }
+</style>
 </html>
