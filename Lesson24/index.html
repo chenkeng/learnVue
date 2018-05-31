@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <link href="../css/style.css" rel="stylesheet"> </head>
+<body>
+<div id="myApp">
+    <my-weather></my-weather>
+    <fuck-mm></fuck-mm>
+    <degree-count :degree="temperature"></degree-count>
+</div>
+<script>
+    var WeatherComponent = {
+        template: '<div>今天下雨，随它去吧！</div>'
+    };
+    var DegreeComponent = {
+        props:['degree'],
+        template: '<div>今天的温度是{{degree}}！</div>'
+    };
+    let FuckMM={
+        template:"<div>Longtime no fuck {{beauty}}</div>",
+        data(){
+            return {
+                beauty:"beautiful MM"
+            }
+        }
+    }
+    var myApp = new Vue({
+        el: '#myApp', 
+        data: {
+            temperature:'50'
+        },
+        components: {
+            'my-weather': WeatherComponent,
+            'fuck-mm':FuckMM,
+            'degree-count':DegreeComponent
+        },
+    });
+</script>
+</body>
+
+</html>

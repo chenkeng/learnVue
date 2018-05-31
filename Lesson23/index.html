@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <link href="../css/style.css" rel="stylesheet"> </head>
+<body>
+<div id="myApp">
+    <today-weather></today-weather>
+    <say-hello></say-hello>
+</div>
+<script>
+    Vue.component('today-weather', {
+        template: '<div>今天下雨，出不去啦，干什么呢？看电影e吧!</div>'
+    });
+    Vue.component('say-hello',{
+        // props:['name'],
+        template:'<div>Hi beauty---{{title}} !</div>',
+        data(){
+            return{
+                title:"superhan"
+            }       
+        }
+    })
+    var myApp = new Vue({
+        el: '#myApp', 
+    });
+</script>
+</body>
+
+</html>
