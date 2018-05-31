@@ -29,12 +29,3 @@ https://cn.vuejs.org/v2/guide/comparison.html
  - ATOM
 * 浏览器（IE9,Chrome,FireFox,Safari）
 
-## 视频计划
-* 每个视频只包括一个知识点，并控制在5分钟之内
-* 原代码共享
- - Git@OSC  
-   https://gitee.com/komavideo/LearnVueJS
-
-## 小马视频频道
-
-http://komavideo.com

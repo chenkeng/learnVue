@@ -32,10 +32,3 @@ JS对象迭代
 </script>
 ~~~
 
-## 源文件
-
-* https://gitee.com/komavideo/LearnVueJS
-
-## 小马视频频道
-
-http://komavideo.com

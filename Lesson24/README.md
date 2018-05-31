@@ -30,10 +30,3 @@ Vue.js的组件不仅可以单独声明注册使用，还可以在Vue实例中�
 </script>
 ~~~
 
-## 源文件
-
-* https://gitee.com/komavideo/LearnVueJS
-
-## 小马视频频道
-
-http://komavideo.com
