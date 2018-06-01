@@ -9,7 +9,7 @@
 
 ### v-if
 
-判断vue.js的变量的值，然后执行页面渲染逻辑。（if-elseif-else）
+判断vue.js的变量的值，然后执行页面渲染逻辑。（if-elseif-else） 
 
 ~~~html
 <div id="myApp">
