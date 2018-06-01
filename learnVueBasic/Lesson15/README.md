@@ -16,7 +16,7 @@
     </ul>
 </div>
 <script>
-    var myApp = new Vue({
+    var myApp = new Vue({ 
         el: '#myApp', 
         data: {
             games: [
