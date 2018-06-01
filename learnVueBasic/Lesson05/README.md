@@ -7,7 +7,7 @@
 
 ### v-on
 
-为页面元素绑定各种事件。（keydown, keyup, click, dbclick, load, etd.）
+为页面元素绑定各种事件。（keydown, keyup, click, dbclick, load, etc.）
 
 ~~~html
 <div id="myApp">
