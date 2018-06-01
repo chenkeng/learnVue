@@ -12,6 +12,7 @@
 <div id="myApp">
     <h1>表单单选按钮</h1>
 
+    
     <h3>选择性别</h3>
     <input type="radio" id="male" value="男" v-model="pickedSex">
     <label for="male">男</label>
