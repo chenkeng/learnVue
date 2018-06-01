@@ -13,7 +13,7 @@ Vue.js的组件不仅可以单独声明注册使用，还可以在Vue实例中�
 
 ~~~html
 <div id="myApp">
-    <my-weather></my-weather>
+    <my-weather></my-weather> 
 </div>
 <script>
     var WeatherComponent = {
