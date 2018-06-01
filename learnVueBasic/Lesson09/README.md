@@ -7,7 +7,7 @@
 
 ### $watch
 
-与computed属性类似，用于观察变量的变化，然后进行相应的处理。（我从Angular而来）
+与computed属性类似，用于观察变量的变化，然后进行相应的处理。（从Angular而来）
 
 ~~~html
 <div id="myApp">
