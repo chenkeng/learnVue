@@ -13,27 +13,27 @@ slot是父组件与子组件的通讯方式，可以将父组件的内容显示�
 
 ~~~html
 <div id="myApp">
-    <say-to pname="koma">
-        你的视频做的太差了。
+    <say-to pname="koma"> 
+        你写的太差了。
     </say-to>
     <say-to pname="mike">
-        你千万不要学koma。
+        你千万不要学。
     </say-to>
     <say-to pname="john">
         你教教他们两个吧。
     </say-to>
 </div>
-<script>
-    Vue.component('say-to', {
-        props: ['pname'],
-        template: '<div>'
-            + '你好，<strong>{{pname}}</strong>！'
-            + '<slot></slot>'
-            + '</div>',
-    });
-    var myApp = new Vue({
-        el: '#myApp',
-    });
-</script>
+    <script>
+        Vue.component('say-to', {
+            props: ['pname'],
+            template: '<div>'
+                + '你好，<strong>{{pname}}</strong>！'
+                + '<slot></slot>'
+                + '</div>',
+        });
+        var myApp = new Vue({
+            el: '#myApp',
+        });
+    </script>
 ~~~
 
