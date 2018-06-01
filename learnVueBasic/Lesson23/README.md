@@ -7,7 +7,7 @@
 
 ### 组件
 
-组件就是页面上的一小块区域内容，完成一个小的页面功能，请参照视频第六课。
+组件就是页面上的一小块区域内容，完成一个小的页面功能。
 
 ## 综合例
 
@@ -17,7 +17,7 @@
 </div>
 <script>
     Vue.component('today-weather', {
-        template: '<div>今天下雨，出不去啦，干什么呢？看Youtube吧!</div>'
+        template: '<div>今天下雨，出不去啦，干什么呢？看电影吧!</div>'
     });
     var myApp = new Vue({
         el: '#myApp', 
