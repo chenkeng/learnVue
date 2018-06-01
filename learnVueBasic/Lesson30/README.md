@@ -18,7 +18,7 @@
 
 ~~~html
 <div id="myApp">
-    <h1>人生加法</h1>
+    <h1>加法</h1>
     <add-method :a="6" :b="12" v-on:add_event="getAddResult"></add-method>
     <hr/>
     <h3>{{result}}</h3>
