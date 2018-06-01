@@ -11,7 +11,7 @@
 ~~~html
 <div id="myApp">
     <h1>表单复选框</h1>
-    <input type="checkbox" id="生化危机7" value="生化危机7" v-model="checkedGames">
+    <input type="checkbox" id="生化危机7" value="生化危机7" v-model="checkedGames"> 
     <label for="生化危机7">生化危机7</label>
     <input type="checkbox" id="模拟飞行" value="模拟飞行" v-model="checkedGames">
     <label for="模拟飞行">模拟飞行</label>
