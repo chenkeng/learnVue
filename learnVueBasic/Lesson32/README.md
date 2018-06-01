@@ -13,7 +13,7 @@
 
 ~~~html
 <div id="myApp">
-    <nba-all-stars c="奥尼尔" pf="加内特">
+    <nba-all-stars c="奥尼尔" pf="加内特"> 
         <span slot="sf">皮尔斯</span>
         <span slot="sg">雷阿伦</span>
         <span slot="pg">隆多</span>
