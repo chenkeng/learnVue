@@ -11,7 +11,7 @@
 ~~~html
 <div id="myApp">
     <h3>你最喜欢的NBA球星是：</h3>
-    <select v-model="likedNBAStar" style="width:210px;">
+    <select v-model="likedNBAStar" style="width:210px;"> 
         <option>科比</option>
         <option>詹姆斯</option>
         <option>哈登</option>
