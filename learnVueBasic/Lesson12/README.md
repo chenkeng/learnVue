@@ -7,7 +7,7 @@ Class对象绑定
 
 ### v-bind:class
 
-为html标记绑定样式单class对象。
+为html标记绑定样式单class对象。 
 
 ~~~html
 <div id="myApp">
