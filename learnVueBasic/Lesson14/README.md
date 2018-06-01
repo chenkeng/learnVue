@@ -7,7 +7,7 @@
 
 ### v-show
 
-标记是否显示html元素。(注意：v-show设置的标记在html DOM中不会消失)
+标记是否显示html元素。(注意：v-show设置的标记在html DOM中不会消失) 
 
 ~~~html
 <div id="myApp">
