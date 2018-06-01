@@ -28,7 +28,7 @@
 
 ## 综合例
 
-~~~html
+~~~html   
 <div id="myApp">
     <h3>游戏列表</h3>
     <div v-if="seen">2017最新发卖</div>
