@@ -12,7 +12,7 @@
 ~~~html
 <div id="myApp">
     <p>今年3月3日发卖的任天堂新一代主机Switch的价格是：{{price}}円，含税价格为：{{priceInTax}}円，折合人民币为：{{priceChinaRMB}}元。</p>
-    <button @click="btnClick(10800)">把含税改价为10800円</button>
+    <button @click="btnClick(10800)">把含税改价为10800円</button> 
 </div>
 <script>
     var myApp = new Vue({
