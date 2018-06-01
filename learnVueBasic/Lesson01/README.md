@@ -9,7 +9,7 @@ Vue.js是一套开发Web页面的Javascript脚本框架，听起来难，其实�
 
 ## 同类框架
 
-* AngularJS
+* AngularJS  
 * ReactJS
 * EmberJS
 * Knockout
