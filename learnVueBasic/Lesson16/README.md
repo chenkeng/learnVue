@@ -10,15 +10,15 @@ JS对象迭代
 循环JS对象，把对象内容循环显示到页面上。
 
 ~~~html
-<div id="myApp">
-    <h1>JS对象迭代</h1>
-    <div v-for="(value, key) in mygame">
-        {{ key }} : {{ value }}
-    </div>
-</div>
+ <div id="myApp">
+        <h1>JS对象迭代</h1>
+        <div v-for="(value, key,index) in mygame">
+            {{index}}- {{ key }} : {{ value }}
+        </div>
+ </div>
 <script>
     var myApp = new Vue({
-        el: '#myApp', 
+        el: '#myApp',
         data: {
             mygame: {
                 title: "乌贼娘2代",
