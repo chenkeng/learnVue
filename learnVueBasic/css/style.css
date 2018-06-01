@@ -3,7 +3,7 @@ body {
 }
 
 button {
-    width: 80px;
+    width: 120px;
     height: 45px;
     font-size: 20px;
 }
@@ -13,7 +13,7 @@ button {
 }
 
 .big {
-    font-weight: bolder;
+    font-weight: bolder; 
     font-size: 64px;
 }
 
