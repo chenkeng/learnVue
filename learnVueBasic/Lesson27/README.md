@@ -16,7 +16,7 @@
     <h1>您的成绩评价</h1>
     <test-result :score="50"></test-result>
     <test-result :score="65"></test-result>
-    <test-result :score="90"></test-result>
+    <test-result :score="90"></test-result> 
     <test-result :score="100"></test-result>
 </div>
 <script>
