@@ -4,7 +4,7 @@
 ## 知识点
 
 * .lazy
-* .number
+* .number 
 * .trim
 
 ### .lazy
