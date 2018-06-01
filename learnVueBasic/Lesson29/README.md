@@ -14,7 +14,7 @@
 ~~~html
 <div id="myApp">
     <h1>身世之谜</h1>
-    <show-member-info name="koma" :age="25" :detail="{address:'earth', language:'世界语'}"></show-member-info>
+    <show-member-info name="koma" :age="25" :detail="{address:'earth', language:'世界语'}"></show-member-info> 
 </div>
 <script>
     Vue.component('show-member-info', {
@@ -26,7 +26,7 @@
             age: {
                 type: Number,
                 validator: function (value) {
-                    return value >= 0 && value <= 130;
+                    return value >= 0 && value <= 100;
                 }                
             },
             detail: {
