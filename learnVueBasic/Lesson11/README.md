@@ -13,7 +13,7 @@ Class绑定
 <div id="myApp">
     <div v-bind:class="{active:isActive}">红色文本1</div>
     <div :class="{active:isActive}">红色文本2</div>
-    <button @click="btnClick">改变class吧</button>
+    <button @click="btnClick">改变class吧</button> 
 </div>
 <script>
     var myApp = new Vue({
