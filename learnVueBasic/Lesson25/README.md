@@ -26,7 +26,7 @@
 </div>
 <script>
     Vue.component('my-row1', {
-        template: '<tr><td>(1)</td><td>塞尔达传说:荒野之息(3/3)</td></tr>'
+        template: '<tr><td>(1)</td><td>塞尔达传说:荒野之息(3/3)</td></tr>' 
     });    
     Vue.component('my-row2', {
         template: '<tr><td>(2)</td><td>新马里奥赛车(4/28)</td></tr>'
