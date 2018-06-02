@@ -1,6 +1,9 @@
 <template>
   <div class="hello">
     <div>{{msg}}</div>
+<Swiper>
+  <router-view></router-view>
+</Swiper>
     <Header class="top">
         <router-view></router-view>
       </Header>
@@ -17,6 +20,7 @@
 </template>
 
 <script>
+import Swiper from './Swiper'
 import Header from './Header'
 import Sider from './Index/Sider'
 import Detail from './Index/Detail'
@@ -28,6 +32,7 @@ export default {
     }
   },
   components:{
+    Swiper:Swiper,
     Header:Header,
     Sider:Sider,
     Detail:Detail
