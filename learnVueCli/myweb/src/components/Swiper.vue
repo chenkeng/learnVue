@@ -44,16 +44,16 @@
 
 
 <style>
-.swiper-container{
-    height: 300px;
-    width: 100%;
+.swiper-container {
+  height: 300px;
+  width: 100%;
 }
-.swiper-container .swiper-slider{
-    width: 100%;
-    height: 300px;
+.swiper-container .swiper-slider {
+  width: 100%;
+  height: 300px;
 }
-.swiper-container img{
-    width: 100%;
-    height: 300px;
+.swiper-container img {
+  width: 100%;
+  height: 300px;
 }
 </style>
