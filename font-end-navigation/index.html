@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" href="font-awesome.min.css">
+    <link rel="stylesheet" href="hover.css">
+    <link rel="stylesheet" href="index.css">
+
+</head>
+
+<body>
+    <div id='app'>
+        <div class="wrap">
+            <div class="wrap-body">
+                <aside class="guide" id="target">
+                    <div class="type-nav">
+                        <div class="type-box" v-for="parent in abstract.parent" :key="parent">
+                            <div class="type-title">
+                                <a href="#d1" class="link-to">
+                                    <span>
+                                        <i class="fa" :class="parent.child.class" aria-hidden="true"></i>
+                                    </span>
+                                    <span class="title">{{parent.child.name}}</span>
+                                </a>
+                            </div>
+                            <ul>
+                                <li class="type-item" v-for="item in parent.child.list" :key="item">
+                                    <a :href="item.href" class="link-to hvr-pulse-shrink" :title="item.title">{{item.title}}</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </aside>
+                <div class="container" id="container">
+                    <main class="main">
+                        <section class="section" v-for="(parent,index) in detail.parent" :id=`d${index+1}`>
+                            <h2 class="section-title">{{parent.title}}</h2>
+                            <div class="section-item" :id="`d${index+1}`+`-${ii+1}`" v-for="(son,ii) in parent.son">
+                                <h3 class="section-sub-title">{{son.name}}</h3>
+                                <ul class="section-box">
+                                    <li v-for="child in son.list" :key="child">
+                                        <a target="_blank" class="hvr-wobble-vertical hvr-shutter-in-horizontal" :href="child.href" :title="child.title">{{child.title}}</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+                    </main>
+                </div>
+            </div>
+            <div class="wrap-footer">
+                Copyright © 2018-2188 created by superhan
+                <a href="#">&copy;superhan版权所有</a> | 京ICP证superhan号
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src='vue.min.js'></script>
+<script src="axios.min.js"></script>
+<script src="Tween.min.js"></script>
+<script src="index.js"></script>
+<script type="text/javascript">
+    var app = new Vue({
+        el: "#app",
+        data: {
+            abstract: {},
+            detail: {}
+        },
+        mounted: function() {
+            axios.get('/data.json')
+                .then(function(res) {
+                    console.log(res.data)
+                        // var data = JSON.parse(res.data);
+                        // var data = eval('(' + res.data + ')');
+                    app.abstract = res.data.abstract;
+                    app.detail = res.data.detail;
+                })
+                .catch(function(error) {
+                    console.log("Json 数据错误！");
+                });
+        }
+    })
+</script>
+
+
+</html>
