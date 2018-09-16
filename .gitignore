@@ -3,4 +3,5 @@ lib
 .idea
 .idea/
 .DS_Store
+.vscode-upload.json
 
